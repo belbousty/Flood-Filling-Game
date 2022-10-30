@@ -183,7 +183,6 @@ static void test_spread_donut (void) {
   struct color_set_t forbidden1[2]={no_color_forbidden,no_color_forbidden};
   struct color_set_t forbidden2[2]={no_color_forbidden,no_color_forbidden};
  
-  //print_color(colors,graph->num_vertices);
   assert(colors[0] == 0);
   assert(colors[1] == 1);
   assert(colors[2] == 2);
@@ -228,7 +227,6 @@ static void test_spread_hgraph (void) {
   struct color_set_t forbidden1[2]={no_color_forbidden,no_color_forbidden};
   struct color_set_t forbidden2[2]={no_color_forbidden,no_color_forbidden};
  
-  //print_color(colors,graph->num_vertices);
   assert(colors[0] == 0);
   assert(colors[1] == -1);
   assert(colors[2] == 1);

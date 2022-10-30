@@ -154,7 +154,6 @@ int main(int argc, char * argv[]) {
             printf("\n the move is %d \n", move.c);
 
             update__forbidden(main_graph, main_colors, i, dyn_forbidden);
-            //update__forbidden(main_graph,main_colors,(i==1)?0:1,dyn_forbidden);
             bool = spread__colors(main_graph, move, i, forbidden, dyn_forbidden, main_colors);
             if (bool == 0)
                 break;

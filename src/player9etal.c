@@ -37,17 +37,14 @@ struct move_t play(struct move_t previous_move) {
   if (depth_iteration==-1)
   {
     moves_in_advance(graph1,colors1,num,acc,id1,moves_dynamic,moves_static,dyn_forbidden1,forbidden1,score);
-    //printf("le score dans ce cas est %d",*score);
     depth_iteration++;
   }
 
   update__forbidden(graph1,colors1,id1,dyn_forbidden1);
   if (depth_iteration<num){
     move.c=moves_dynamic[depth_iteration].c;
-   // printf("le move est wtf ? :%d",move.c);
     if (CharNotIn(EnumToChar(move.c),dyn_forbidden1[id1].t))
     { 
-      //printf("encore ici?");
       bool=spread__colors(graph1,move,id1,forbidden1,dyn_forbidden1,colors1);
       depth_iteration++;
       free(score);
